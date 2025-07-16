@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agritech API Reference Sheet</title>
+  <!-- Tailwind CDN for quick prototyping; purge for production -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>.backdrop{backdrop-filter:blur(4px);}</style>
+</head>
+<body class="bg-gray-50 text-gray-800 leading-normal">
+<header class="bg-green-700 text-white p-6 shadow-md">
+  <h1 class="text-3xl font-bold text-center">Agritech API Reference Sheet</h1>
+  <p class="text-center text-sm mt-2">Click "See&nbsp;more" for plain‑English explanations</p>
+</header>
+
+<main class="max-w-6xl mx-auto p-6 space-y-12">
+
+  <!-- Existing sections (Soil, Weather & Drought, Satellite, Pest, Market, Messaging, Payment) kept unchanged -->
+
+  <!-- ================= KEY WEATHER PARAMETERS ================= -->
+  <section id="weather-parameters">
+    <h2 class="text-2xl font-semibold mb-4">Key Weather Parameters (Plain English)</h2>
+    <table class="min-w-full divide-y divide-gray-200 border rounded-lg shadow-sm">
+      <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left">
+        <tr>
+          <th class="px-4 py-2 w-1/4">Parameter</th>
+          <th class="px-4 py-2">What It Measures (Simple)</th>
+          <th class="px-4 py-2 w-1/3">Why It Matters for Farmers / Devs</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-200 text-sm">
+        <tr>
+          <td class="px-4 py-2 font-medium">Rainfall&nbsp;(mm)</td>
+          <td class="px-4 py-2">How much water falls from the sky over a period.</td>
+          <td class="px-4 py-2">Too little → drought stress; too much → flooding or disease. Core input for irrigation or drought‑alert logic.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium">Air&nbsp;Temperature&nbsp;(°C)</td>
+          <td class="px-4 py-2">How hot or cold the air is.</td>
+          <td class="px-4 py-2">Drives crop growth speed and pest reproduction. Used to calculate Growing Degree Days.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium">Relative&nbsp;Humidity&nbsp;(%)</td>
+          <td class="px-4 py-2">How full the air is with water vapour.</td>
+          <td class="px-4 py-2">High humidity + warmth = fungus risk. Low humidity increases evapotranspiration.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium">Solar&nbsp;Radiation&nbsp;(W/m²)</td>
+          <td class="px-4 py-2">Sunlight energy reaching the ground.</td>
+          <td class="px-4 py-2">More light → more photosynthesis. Needed for yield models and ET₀ calculations.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium">Wind&nbsp;Speed&nbsp;(m/s)</td>
+          <td class="px-4 py-2">How fast the air is moving.</td>
+          <td class="px-4 py-2">Affects spray drift and evapotranspiration. High winds can damage crops.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium">Evapotranspiration&nbsp;(ET₀)</td>
+          <td class="px-4 py-2">Combined water loss from soil + plants.</td>
+          <td class="px-4 py-2">Tells you how much water crops actually need. Basis for irrigation scheduling.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium">Soil&nbsp;Moisture&nbsp;(%)</td>
+          <td class="px-4 py-2">How wet the soil is right now.</td>
+          <td class="px-4 py-2">Direct drought indicator. Used with rainfall to decide when to irrigate or warn of wilting risk.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium">Growing&nbsp;Degree&nbsp;Days&nbsp;(GDD)</td>
+          <td class="px-4 py-2">Heat units accumulated by a crop.</td>
+          <td class="px-4 py-2">Predicts crop development stages (e.g., flowering). Lets you time fertiliser or pesticide applications.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="text-xs text-gray-500 mt-2">Tip for devs: most weather APIs (OpenWeather, Tomorrow.io) return these fields already—just map their JSON keys to the names above.</p>
+  </section>
+
+</main>
+
+
+<!-- Minimal Modal JS placeholder (to avoid console errors) -->
+<script>
+function openModal(btn){
+  alert(btn.dataset.title + "\n\n" + btn.dataset.description);
+}
+</script>
+</body>
+</html>

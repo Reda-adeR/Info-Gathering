@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agritech API Reference Sheet</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 leading-normal">
+  <header class="bg-green-700 text-white p-6 shadow-md">
+    <h1 class="text-3xl font-bold text-center">Agritech API Reference Sheet</h1>
+    <p class="text-center text-sm mt-2">Curated list of useful APIs for African farm‑management &amp; warning platforms</p>
+  </header>
+  <main class="max-w-5xl mx-auto p-6 space-y-12">
+
+    <!-- Helper component -->
+    <template id="table-template">
+      <table class="min-w-full divide-y divide-gray-200 border rounded-lg shadow-sm">
+        <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left">
+          <tr>
+            <th class="px-4 py-2 w-1/4">API / Service</th>
+            <th class="px-4 py-2">What You Get / Focus</th>
+            <th class="px-4 py-2 w-1/5">Coverage</th>
+            <th class="px-4 py-2 w-1/4">Link</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 text-sm"></tbody>
+      </table>
+    </template>
+
+    <!-- Soil & Soil‑Health -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Soil &amp; Soil‑Health APIs</h2>
+      <table class="min-w-full divide-y divide-gray-200 border rounded-lg shadow-sm">
+        <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left">
+          <tr>
+            <th class="px-4 py-2 w-1/4">API / Service</th>
+            <th class="px-4 py-2">What You Get / Focus</th>
+            <th class="px-4 py-2 w-1/5">Coverage</th>
+            <th class="px-4 py-2 w-1/4">Link</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 text-sm">
+          <tr>
+            <td class="px-4 py-2 font-medium">iSDAsoil 30 m API</td>
+            <td class="px-4 py-2">20+ soil properties at 30 m resolution</td>
+            <td class="px-4 py-2">Pan‑Africa</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://isda-africa.com/isdasoil" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">SoilGrids 250 m v2</td>
+            <td class="px-4 py-2">Global soil raster layers (pH, SOC, texture)</td>
+            <td class="px-4 py-2">Global</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://soilgrids.org" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">OpenLandMap</td>
+            <td class="px-4 py-2">30‑250 m soil &amp; land‑cover layers</td>
+            <td class="px-4 py-2">Global</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://openlandmap.org" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">GLOSIS/FAO Caliper SPARQL</td>
+            <td class="px-4 py-2">Official FAO soil profile data</td>
+            <td class="px-4 py-2">Global</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://data.apps.fao.org" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Weather, Climate & Drought -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Weather, Climate &amp; Drought APIs</h2>
+      <table class="min-w-full divide-y divide-gray-200 border rounded-lg shadow-sm">
+        <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left">
+          <tr>
+            <th class="px-4 py-2 w-1/4">API / Service</th>
+            <th class="px-4 py-2">What You Get / Focus</th>
+            <th class="px-4 py-2 w-1/5">Coverage</th>
+            <th class="px-4 py-2 w-1/4">Link</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 text-sm">
+          <tr>
+            <td class="px-4 py-2 font-medium">CHIRPS Rainfall</td>
+            <td class="px-4 py-2">5 km rainfall estimates (1981‑present)</td>
+            <td class="px-4 py-2">Africa (global 50°S–N)</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://www.chc.ucsb.edu/data/chirps" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">TAMSAT‑ALERT</td>
+            <td class="px-4 py-2">7‑day soil‑moisture &amp; SPI drought outlook</td>
+            <td class="px-4 py-2">Sub‑Saharan Africa</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://www.tamsat.org.uk" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">Copernicus Climate Data Store</td>
+            <td class="px-4 py-2">Re‑analysis & seasonal forecasts (ERA5, SEAS5)</td>
+            <td class="px-4 py-2">Global</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://cds.climate.copernicus.eu" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">Tomorrow.io Weather API</td>
+            <td class="px-4 py-2">Minute‑level forecasts, ET₀ & GDD</td>
+            <td class="px-4 py-2">Global</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://www.tomorrow.io" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">Meteostat</td>
+            <td class="px-4 py-2">Historical weather observations</td>
+            <td class="px-4 py-2">Global stations</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://meteostat.net" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Satellite Imagery & Crop Status -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Satellite Imagery &amp; Crop Status APIs</h2>
+      <table class="min-w-full divide-y divide-gray-200 border rounded-lg shadow-sm">
+        <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left">
+          <tr>
+            <th class="px-4 py-2 w-1/4">API / Service</th>
+            <th class="px-4 py-2">What You Get / Focus</th>
+            <th class="px-4 py-2 w-1/5">Coverage</th>
+            <th class="px-4 py-2 w-1/4">Link</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 text-sm">
+          <tr>
+            <td class="px-4 py-2 font-medium">Sentinel‑Hub</td>
+            <td class="px-4 py-2">NDVI, EVI, RGB tiles & time series</td>
+            <td class="px-4 py-2">Global</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://www.sentinel-hub.com" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">PlanetScope / Skysat</td>
+            <td class="px-4 py-2">Sub‑5 m daily imagery</td>
+            <td class="px-4 py-2">Global (paid)</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://www.planet.com" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">Google Earth Engine REST</td>
+            <td class="px-4 py-2">Scriptable access to 900+ raster datasets</td>
+            <td class="px-4 py-2">Global</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://developers.google.com/earth-engine" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Pest & Disease Detection -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Pest &amp; Disease Detection APIs</h2>
+      <table class="min-w-full divide-y divide-gray-200 border rounded-lg shadow-sm">
+        <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left">
+          <tr>
+            <th class="px-4 py-2 w-1/4">API / Service</th>
+            <th class="px-4 py-2">What You Get / Focus</th>
+            <th class="px-4 py-2 w-1/5">Coverage</th>
+            <th class="px-4 py-2 w-1/4">Link</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 text-sm">
+          <tr>
+            <td class="px-4 py-2 font-medium">FAO FAMEWS API</td>
+            <td class="px-4 py-2">Fall‑armyworm trap counts</td>
+            <td class="px-4 py-2">40+ African countries</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://famews.fao.org" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">Plantix Vision</td>
+            <td class="px-4 py-2">Plant disease detection via images</td>
+            <td class="px-4 py-2">Global crops</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://plantix.net/en/" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">PlantVillage Nuru SDK</td>
+            <td class="px-4 py-2">Offline CNN model for maize & cassava diseases</td>
+            <td class="px-4 py-2">Works offline</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://plantvillage.psu.edu" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Market & Price Intelligence -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Market &amp; Price Intelligence APIs</h2>
+      <table class="min-w-full divide-y divide-gray-200 border rounded-lg shadow-sm">
+        <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left">
+          <tr>
+            <th class="px-4 py-2 w-1/4">API / Service</th>
+            <th class="px-4 py-2">What You Get / Focus</th>
+            <th class="px-4 py-2 w-1/5">Coverage</th>
+            <th class="px-4 py-2 w-1/4">Link</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 text-sm">
+          <tr>
+            <td class="px-4 py-2 font-medium">IFPRI Food‑Security Portal API</td>
+            <td class="px-4 py-2">Regional cereal prices & volatility indices</td>
+            <td class="px-4 py-2">Global</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://www.foodsecurityportal.org/api" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">FAOSTAT API</td>
+            <td class="px-4 py-2">Production, trade, fertiliser cost data</td>
+            <td class="px-4 py-2">Global</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://www.fao.org/faostat/en/#data" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">AgriBase Market Data API</td>
+            <td class="px-4 py-2">Spot & historical grain/livestock prices</td>
+            <td class="px-4 py-2">Southern Africa</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://agribase.co.za" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Messaging & Last‑Mile Delivery -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Messaging &amp; Last‑Mile Delivery APIs</h2>
+      <table class="min-w-full divide-y divide-gray-200 border rounded-lg shadow-sm">
+        <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left">
+          <tr>
+            <th class="px-4 py-2 w-1/4">API / Service</th>
+            <th class="px-4 py-2">What You Get / Focus</th>
+            <th class="px-4 py-2 w-1/5">Coverage</th>
+            <th class="px-4 py-2 w-1/4">Link</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 text-sm">
+          <tr>
+            <td class="px-4 py-2 font-medium">Africa's Talking</td>
+            <td class="px-4 py-2">SMS, USSD gateway for 26 countries</td>
+            <td class="px-4 py-2">East & West Africa</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://africastalking.com" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">Infobip</td>
+            <td class="px-4 py-2">Bulk SMS, WhatsApp, rich messaging</td>
+            <td class="px-4 py-2">Global (strong in Africa)</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://www.infobip.com" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">Twilio Programmable Messaging</td>
+            <td class="px-4 py-2">SMS, WhatsApp, voice APIs</td>
+            <td class="px-4 py-2">10+ African markets</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://www.twilio.com" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">Clickatell</td>
+            <td class="px-4 py-2">SMS & mobile‑money integration</td>
+            <td class="px-4 py-2">Global</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://www.clickatell.com" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- Payment & Incentive Rails -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4">Payment &amp; Incentive Rails</h2>
+      <table class="min-w-full divide-y divide-gray-200 border rounded-lg shadow-sm">
+        <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left">
+          <tr>
+            <th class="px-4 py-2 w-1/4">API / Service</th>
+            <th class="px-4 py-2">What You Get / Focus</th>
+            <th class="px-4 py-2 w-1/5">Coverage</th>
+            <th class="px-4 py-2 w-1/4">Link</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 text-sm">
+          <tr>
+            <td class="px-4 py-2 font-medium">M‑Pesa Daraja API</td>
+            <td class="px-4 py-2">Mobile‑money payments & payouts</td>
+            <td class="px-4 py-2">Kenya, Tanzania</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://developer.safaricom.co.ke" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">Paystack</td>
+            <td class="px-4 py-2">Cards, mobile‑money, PayPal integration</td>
+            <td class="px-4 py-2">Nigeria, Ghana, Kenya</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://paystack.com" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">Flutterwave</td>
+            <td class="px-4 py-2">Pan‑African payments & payouts</td>
+            <td class="px-4 py-2">30+ African countries</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://flutterwave.com" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">Tangazoletu I2C</td>
+            <td class="px-4 py-2">Airtime‑to‑cash micro‑payments</td>
+            <td class="px-4 py-2">Kenya</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://www.tangazoletu.com" target="_blank" class="hover:underline">Visit site</a></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+  </main>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agritech API Reference Sheet</title>
+  <!-- Tailwind CDN for quick prototyping; purge for production -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>.backdrop{backdrop-filter:blur(4px);}</style>
+</head>
+<body class="bg-gray-50 text-gray-800 leading-normal">
+<header class="bg-green-700 text-white p-6 shadow-md">
+  <h1 class="text-3xl font-bold text-center">Agritech API Reference Sheet</h1>
+  <p class="text-center text-sm mt-2">Click "See&nbsp;more" for plain‑English explanations</p>
+</header>
+
+<main class="max-w-6xl mx-auto p-6 space-y-12">
+
+  <!-- Existing sections (Soil, Weather & Drought, Satellite, Pest, Market, Messaging, Payment) kept unchanged -->
+
+
+
+  <!-- ================= SOIL FERTILITY BASICS ================= -->
+  <section id="soil-fertility-basics" class="mt-12">
+    <h2 class="text-2xl font-semibold mb-4">Basic Concepts on Soil Fertility</h2>
+    <table class="min-w-full divide-y divide-gray-200 border rounded-lg shadow-sm">
+      <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left">
+        <tr>
+          <th class="px-4 py-2 w-1/4">Soil Thing</th>
+          <th class="px-4 py-2">Friendly Meaning</th>
+          <th class="px-4 py-2 w-1/3">Why Plants Care</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-gray-200 text-sm">
+        <tr>
+          <td class="px-4 py-2 font-medium">Nitrogen (N)</td>
+          <td class="px-4 py-2">The “leafy green” food that helps plants grow tall and dark green like spinach for humans.</td>
+          <td class="px-4 py-2">Without enough N, leaves turn pale and growth slows.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium">Phosphorus (P)</td>
+          <td class="px-4 py-2">Gives plants energy to make strong roots and healthy seeds like batteries in a toy.</td>
+          <td class="px-4 py-2">Low P means weak roots and few fruits.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium">Potassium (K)</td>
+          <td class="px-4 py-2">Helps plants stay healthy and fight “colds” (disease) like vitamins for us.</td>
+          <td class="px-4 py-2">Good K makes fruits bigger and plants tougher in drought.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium">Soil pH</td>
+          <td class="px-4 py-2">How sour or sweet the soil juice is, on a scale of 0–14.</td>
+          <td class="px-4 py-2">Most crops like “just right” 6–7; too sour locks up nutrients.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium">Organic Matter</td>
+          <td class="px-4 py-2">Rotten leaves &amp; compost that make soil fluffy and full of snacks.</td>
+          <td class="px-4 py-2">Feeds microbes, holds water, and slowly releases nutrients.</td>
+        </tr>
+        <tr>
+          <td class="px-4 py-2 font-medium">Soil Texture</td>
+          <td class="px-4 py-2">Whether soil feels sandy, silty (flour), or clayey (sticky).</td>
+          <td class="px-4 py-2">Affects water holding: sand drains fast, clay holds water but can drown roots.</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="text-xs text-gray-500 mt-2">Fun fact: farmers call Nitrogen, Phosphorus, and Potassium the “N‑P‑K trio.” Fertiliser bags show them as three numbers, like 10‑5‑15.</p>
+  </section>
+  <section id="soil-fertility-basics" class="mt-12">
+    <b>SoilGrids</b> is a collections of soil property maps for the world produced using machine learning at 250 m resolution. Predictions are made at six standard depths. 
+    SoilGrids uses global models that are calibrated using all available input observations and globally available environmental covariates.
+  </section>
+
+</main>
+
+
+<!-- Minimal Modal JS placeholder (to avoid console errors) -->
+<script>
+function openModal(btn){
+  alert(btn.dataset.title + "\n\n" + btn.dataset.description);
+}
+</script>
+</body>
+</html>

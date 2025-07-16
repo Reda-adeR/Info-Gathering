@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strategic Crop & Fertilization Data – Africa Snapshot</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800 leading-normal">
+  <header class="bg-amber-600 text-white p-6 shadow-md">
+    <h1 class="text-3xl font-bold text-center">Strategic Crops &amp; Fertilization – Africa (2024 snapshot)</h1>
+    <p class="text-center text-sm mt-2">Sourced primarily from <a href="https://www.fao.org/faostat/en" class="underline font-semibold" target="_blank">FAOSTAT</a> latest 2023/24 release.<br>Numbers rounded to nearest tenth; follow links in each row for raw data queries.</p>
+  </header>
+
+  <main class="max-w-6xl mx-auto p-6 space-y-12">
+
+    <!-- Helper component for table head -->
+    <template id="crop-head">
+      <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left">
+        <tr>
+          <th class="px-4 py-2">Country</th>
+          <th class="px-4 py-2">Area&nbsp;(k&nbsp;ha)</th>
+          <th class="px-4 py-2">Avg&nbsp;Yield&nbsp;(t/ha)</th>
+          <th class="px-4 py-2">Production&nbsp;(k&nbsp;t)</th>
+          <th class="px-4 py-2">Fertiliser&nbsp;Use* (kg/ha)</th>
+          <th class="px-4 py-2">Link</th>
+        </tr>
+      </thead>
+    </template>
+
+    <!-- ====== Maize ====== -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-yellow-800">Maize (📈 Africa’s #1 cereal)</h2>
+      <table class="min-w-full divide-y divide-gray-200 border rounded-lg shadow-sm mb-2">
+        <!-- head clone here -->
+        <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left">
+          <tr>
+            <th class="px-4 py-2">Country</th>
+            <th class="px-4 py-2">Area&nbsp;(k&nbsp;ha)</th>
+            <th class="px-4 py-2">Yield&nbsp;(t/ha)</th>
+            <th class="px-4 py-2">Prod.&nbsp;(k&nbsp;t)</th>
+            <th class="px-4 py-2">Fert kg/ha</th>
+            <th class="px-4 py-2">Source</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 text-sm">
+          <tr>
+            <td class="px-4 py-2 font-medium">Nigeria</td>
+            <td class="px-4 py-2">6 400</td>
+            <td class="px-4 py-2">2.1</td>
+            <td class="px-4 py-2">13 500</td>
+            <td class="px-4 py-2">~28</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://fenixservices.fao.org/faostat/api/v1/en/FAOSTATData/QC/Area/NGN/maize" target="_blank" class="hover:underline">FAOSTAT</a></td>
+          </tr>
+          <tr class="bg-gray-50">
+            <td class="px-4 py-2 font-medium">South Africa</td>
+            <td class="px-4 py-2">2 600</td>
+            <td class="px-4 py-2">5.5</td>
+            <td class="px-4 py-2">14 300</td>
+            <td class="px-4 py-2">~96</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://fenixservices.fao.org/faostat/api/v1/en/FAOSTATData/QC/Area/ZAF/maize" target="_blank" class="hover:underline">FAOSTAT</a></td>
+          </tr>
+          <tr>
+            <td class="px-4 py-2 font-medium">Ethiopia</td>
+            <td class="px-4 py-2">2 400</td>
+            <td class="px-4 py-2">3.3</td>
+            <td class="px-4 py-2">7 900</td>
+            <td class="px-4 py-2">~45</td>
+            <td class="px-4 py-2 text-blue-600"><a href="https://fenixservices.fao.org/faostat/api/v1/en/FAOSTATData/QC/Area/ETH/maize" target="_blank" class="hover:underline">FAOSTAT</a></td>
+          </tr>
+        </tbody>
+      </table>
+      <p class="text-xs text-gray-500">*Fertiliser kg/ha is total N+P2O5+K2O consumption divided by arable land – proxy only (World Bank)</p>
+    </section>
+
+    <!-- ====== Cassava ====== -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-rose-800">Cassava (🍠 Top food security root)</h2>
+      <table class="min-w-full divide-y divide-gray-200 border rounded-lg shadow-sm mb-2">
+        <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left"><tr><th class="px-4 py-2">Country</th><th class="px-4 py-2">Area&nbsp;(k&nbsp;ha)</th><th class="px-4 py-2">Yield&nbsp;(t/ha)</th><th class="px-4 py-2">Prod.&nbsp;(k&nbsp;t)</th><th class="px-4 py-2">Link</th></tr></thead>
+        <tbody class="divide-y divide-gray-200 text-sm">
+          <tr><td class="px-4 py-2 font-medium">Nigeria</td><td class="px-4 py-2">7 600</td><td class="px-4 py-2">8.9</td><td class="px-4 py-2">67 800</td><td class="px-4 py-2 text-blue-600"><a href="https://fenixservices.fao.org/faostat/api/v1/en/FAOSTATData/QC/Area/NGN/cassava" target="_blank" class="hover:underline">FAOSTAT</a></td></tr>
+          <tr class="bg-gray-50"><td class="px-4 py-2 font-medium">DR Congo</td><td class="px-4 py-2">3 300</td><td class="px-4 py-2">8.0</td><td class="px-4 py-2">26 400</td><td class="px-4 py-2 text-blue-600"><a href="https://fenixservices.fao.org/faostat/api/v1/en/FAOSTATData/QC/Area/COD/cassava" target="_blank" class="hover:underline">FAOSTAT</a></td></tr>
+          <tr><td class="px-4 py-2 font-medium">Ghana</td><td class="px-4 py-2">990</td><td class="px-4 py-2">16.4</td><td class="px-4 py-2">16 200</td><td class="px-4 py-2 text-blue-600"><a href="https://fenixservices.fao.org/faostat/api/v1/en/FAOSTATData/QC/Area/GHA/cassava" target="_blank" class="hover:underline">FAOSTAT</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ====== Sorghum ====== -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-purple-800">Sorghum (🌾 Climate‑smart cereal)</h2>
+      <table class="min-w-full divide-y divide-gray-200 border rounded-lg shadow-sm mb-2">
+        <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left"><tr><th class="px-4 py-2">Country</th><th class="px-4 py-2">Area&nbsp;(k&nbsp;ha)</th><th class="px-4 py-2">Yield&nbsp;(t/ha)</th><th class="px-4 py-2">Prod.&nbsp;(k&nbsp;t)</th><th class="px-4 py-2">Link</th></tr></thead>
+        <tbody class="divide-y divide-gray-200 text-sm">
+          <tr><td class="px-4 py-2 font-medium">Sudan</td><td class="px-4 py-2">4 800</td><td class="px-4 py-2">1.1</td><td class="px-4 py-2">5 300</td><td class="px-4 py-2 text-blue-600"><a href="https://fenixservices.fao.org/faostat/api/v1/en/FAOSTATData/QC/Area/SDN/sorghum" target="_blank" class="hover:underline">FAOSTAT</a></td></tr>
+          <tr class="bg-gray-50"><td class="px-4 py-2 font-medium">Nigeria</td><td class="px-4 py-2">5 100</td><td class="px-4 py-2">1.1</td><td class="px-4 py-2">5 600</td><td class="px-4 py-2 text-blue-600"><a href="https://fenixservices.fao.org/faostat/api/v1/en/FAOSTATData/QC/Area/NGN/sorghum" target="_blank" class="hover:underline">FAOSTAT</a></td></tr>
+          <tr><td class="px-4 py-2 font-medium">Ethiopia</td><td class="px-4 py-2">1 900</td><td class="px-4 py-2">2.3</td><td class="px-4 py-2">4 400</td><td class="px-4 py-2 text-blue-600"><a href="https://fenixservices.fao.org/faostat/api/v1/en/FAOSTATData/QC/Area/ETH/sorghum" target="_blank" class="hover:underline">FAOSTAT</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ====== Farmers overview ====== -->
+    <section>
+      <h2 class="text-2xl font-semibold mb-4 text-sky-800">Farmers &amp; Fertiliser Use Snapshot</h2>
+      <table class="min-w-full divide-y divide-gray-200 border rounded-lg shadow-sm">
+        <thead class="bg-gray-100 uppercase text-xs tracking-wider text-left"><tr><th class="px-4 py-2">Country</th><th class="px-4 py-2">Agri&nbsp;Employment&nbsp;(mill)</th><th class="px-4 py-2">Share&nbsp;in&nbsp;total&nbsp;employment</th><th class="px-4 py-2">Fertiliser&nbsp;consumption kg/ha arable</th><th class="px-4 py-2">Link</th></tr></thead>
+        <tbody class="divide-y divide-gray-200 text-sm">
+          <tr><td class="px-4 py-2 font-medium">Nigeria</td><td class="px-4 py-2">33</td><td class="px-4 py-2">35 %</td><td class="px-4 py-2">~28</td><td class="px-4 py-2 text-blue-600"><a href="https://data.worldbank.org/indicator/AG.CON.FERT.ZS?locations=NG" target="_blank" class="hover:underline">World Bank</a></td></tr>
+          <tr class="bg-gray-50"><td class="px-4 py-2 font-medium">Ethiopia</td><td class="px-4 py-2">21</td><td class="px-4 py-2">62 %</td><td class="px-4 py-2">~42</td><td class="px-4 py-2 text-blue-600"><a href="https://data.worldbank.org/indicator/AG.CON.FERT.ZS?locations=ET" target="_blank" class="hover:underline">World Bank</a></td></tr>
+          <tr><td class="px-4 py-2 font-medium">Kenya</td><td class="px-4 py-2">7</td><td class="px-4 py-2">51 %</td><td class="px-4 py-2">~63</td><td class="px-4 py-2 text-blue-600"><a href="https://data.worldbank.org/indicator/AG.CON.FERT.ZS?locations=KE" target="_blank" class="hover:underline">World Bank</a></td></tr>
+        </tbody>
+      </table>
+      <p class="text-xs text-gray-500 mt-2">Employment & fertiliser indicators: World Bank 2023. Agri&nbsp;employment approximated from ILOSTAT.</p>
+    </section>
+
+  </main>
+
+  <footer class="text-center text-xs text-gray-500 py-6">© 2025 Africa Crop Data Snapshot. Sources: FAOSTAT, World Bank, ILOSTAT.</footer>
+</body>
+</html>
