@@ -49,3 +49,19 @@ Tables for Maize, Cassava, Sorghum by country: area (k ha), yield (t/ha), prod
 Farmers & Fertiliser Use mini‑table: ag employment, share of labour force, fertiliser kg/ha (World Bank proxy).
 Numbers rounded; links point to raw dataset queries for validation.
 Good for dashboards, investor decks, or baseline comparisons in agronomic tools.
+
+
+______________________________________________________________________________
+
+
+
+# LinkdIn Posting Strategies - different types of posts with examples    linkdin_strat.html
+
+A quick reference page that shows the main LinkedIn post types startups use and how to write them. Each section includes:
+
+ - Post type definition (when to use it)
+ - Structure template (Hook → Value → CTA placeholders)
+ - Editable example copy adapted to Agri AI themes
+ - Suggested visuals/emoji cues and engagement prompts
+
+Covered types: Informative/Educational · Teaser/Behind‑the‑Scenes · Founder/Team Intro · Problem–Solution · Collaborative/Partnership · Milestone/Celebration · Launch Announcement · User/Testimonial.
