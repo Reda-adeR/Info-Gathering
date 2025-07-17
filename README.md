@@ -67,6 +67,9 @@ A quick reference page that shows the main LinkedIn post types startups use and 
 Covered types: Informative/Educational · Teaser/Behind‑the‑Scenes · Founder/Team Intro · Problem–Solution · Collaborative/Partnership · Milestone/Celebration · Launch Announcement · User/Testimonial.
 
 
+______________________________________________________________________________
+
+
 
 # API's details - different API providers with the pricing table link    specific_api.html
 
