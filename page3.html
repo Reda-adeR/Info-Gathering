@@ -71,6 +71,77 @@
     SoilGrids uses global models that are calibrated using all available input observations and globally available environmental covariates.
   </section>
 
+  <!-- ================= SOIL FERTILITY – HOW TO FETCH YOUR FIELD DATA ================= -->
+<section id="soil-fertility-howto" class="bg-white border rounded-xl shadow-md p-8 space-y-6">
+
+  <!-- Heading -->
+  <div class="text-center">
+    <h2 class="text-2xl font-bold text-emerald-700">Soil‑Fertility Snapshot – Get N P K, pH, OM &amp; Texture for Your Land</h2>
+    <p class="text-sm text-gray-500 mt-1">Follow these 4 quick steps – no lab visit required.</p>
+  </div>
+
+  <!-- Step cards -->
+  <div class="grid gap-6 md:grid-cols-2">
+
+    <!-- Step 1 -->
+    <div class="flex items-start gap-4">
+      <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold shrink-0">1</span>
+      <div>
+        <h3 class="font-semibold text-gray-800">Draw or upload your field polygon</h3>
+        <p class="text-sm text-gray-600">
+          Use any geo tool (QGIS, Google Earth, Farm OS) to export a <code>.geojson</code> or capture a simple
+          <code>bbox [minLon, minLat, maxLon, maxLat]</code>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="flex items-start gap-4">
+      <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold shrink-0">2</span>
+      <div>
+        <h3 class="font-semibold text-gray-800">Pick a soil API</h3>
+        <ul class="list-disc pl-4 text-sm text-gray-600 space-y-1">
+          <li><strong>iSDAsoil 30 m</strong> – best detail across Africa.</li>
+          <li><strong>SoilGrids 250 m</strong> – global, free, six depth layers.</li>
+          <li><strong>OpenLandMap</strong> – texture &amp; organic C extras.</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="flex items-start gap-4">
+      <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold shrink-0">3</span>
+      <div>
+        <h3 class="font-semibold text-gray-800">Query the endpoint</h3>
+        <p class="text-sm text-gray-600">
+          <code class="block bg-gray-100 rounded p-2 my-2 text-xs overflow-x-auto">GET https://isdasoil.io/api/v1/soil?lon=36.82&lat=-1.29&property=ph,nitrogen,potassium</code>
+          or POST your polygon to get a full table (JSON or GeoTIFF). Expect keys like <code>ph_h2o</code>, <code>soc</code>, <code>n_tot</code>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="flex items-start gap-4">
+      <span class="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-600 text-white font-semibold shrink-0">4</span>
+      <div>
+        <h3 class="font-semibold text-gray-800">Visualise &amp; decide actions</h3>
+        <p class="text-sm text-gray-600">
+          Map pH classes (e.g.&nbsp;acid < 5.5) → lime plan.  
+          Overlay N &amp; organic C → variable‑rate fertiliser.  
+          Texture (% sand/silt/clay) drives irrigation zones.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Call‑out -->
+  <div class="mt-6 border-l-4 border-emerald-600 bg-emerald-50 p-4 rounded-r-lg text-sm text-emerald-800">
+    🔧 <strong>Tip for devs:</strong> cache the soil API response locally—soil properties change slowly, so one call can serve months of app sessions.
+  </div>
+
+</section>
+
 </main>
 
 

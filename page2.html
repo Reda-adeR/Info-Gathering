@@ -74,6 +74,104 @@
     </table>
     <p class="text-xs text-gray-500 mt-2">Tip for devs: most weather APIs (OpenWeather, Tomorrow.io) return these fields already—just map their JSON keys to the names above.</p>
   </section>
+  <!-- =============== KEY WEATHER PARAMETERS – HOW TO PULL LIVE DATA =============== -->
+<section id="weather-howto" class="bg-white border rounded-xl shadow-md p-8 space-y-6">
+
+  <!-- Heading -->
+  <div class="text-center">
+    <h2 class="text-2xl font-bold text-sky-700">Live Weather Snapshot – Fetch Rain, Temp, Humidity &amp; More</h2>
+    <p class="text-sm text-gray-500 mt-1">Four micro‑steps to wire real‑time weather into your dashboard.</p>
+  </div>
+
+  <!-- Glossary chips -->
+  <div class="flex flex-wrap justify-center gap-3">
+    <span class="tooltip bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-xs font-medium">
+      Rainfall (mm)
+      <span class="tip-card">Depth of precipitation collected in a standard gauge.</span>
+    </span>
+    <span class="tooltip bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-xs font-medium">
+      Air Temp (°C)
+      <span class="tip-card">Ambient air temperature at 2 m height.</span>
+    </span>
+    <span class="tooltip bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-xs font-medium">
+      Humidity (%)
+      <span class="tip-card">Percent of water vapour the air can hold at that temp.</span>
+    </span>
+    <span class="tooltip bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-xs font-medium">
+      Solar Rad (W/m²)
+      <span class="tip-card">Short‑wave energy reaching ground—fuel for photosynthesis.</span>
+    </span>
+    <span class="tooltip bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-xs font-medium">
+      Wind Speed (m/s)
+      <span class="tip-card">Horizontal air movement @ 10 m height.</span>
+    </span>
+    <span class="tooltip bg-sky-100 text-sky-800 px-3 py-1 rounded-full text-xs font-medium">
+      Soil Moisture (%)
+      <span class="tip-card">Volumetric water content of topsoil (0‑7 cm).</span>
+    </span>
+  </div>
+
+  <!-- Step cards -->
+  <div class="grid gap-6 md:grid-cols-2">
+
+    <!-- Step 1 -->
+    <div class="flex items-start gap-4">
+      <span class="flex h-10 w-10 items-center justify-center rounded-full bg-sky-600 text-white font-semibold shrink-0">1</span>
+      <div>
+        <h3 class="font-semibold text-gray-800">Pin your field coordinates</h3>
+        <p class="text-sm text-gray-600">
+          Grab <code>lat, lon</code> of the field center or a bounding box.  
+          Google Maps or QGIS → right‑click → <em>Copy coords</em>.
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 2 -->
+    <div class="flex items-start gap-4">
+      <span class="flex h-10 w-10 items-center justify-center rounded-full bg-sky-600 text-white font-semibold shrink-0">2</span>
+      <div>
+        <h3 class="font-semibold text-gray-800">Choose a weather API</h3>
+        <ul class="list-disc pl-4 text-sm text-gray-600 space-y-1">
+          <li><strong>NASA POWER</strong> – free daily agro‑params (rain, ET₀, rad) worldwide.</li>
+          <li><strong>Tomorrow.io</strong> – minute‑level forecast, soil moisture model.</li>
+          <li><strong>Meteostat</strong> – historical station data (30 yrs).</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Step 3 -->
+    <div class="flex items-start gap-4">
+      <span class="flex h-10 w-10 items-center justify-center rounded-full bg-sky-600 text-white font-semibold shrink-0">3</span>
+      <div>
+        <h3 class="font-semibold text-gray-800">Hit the endpoint</h3>
+        <p class="text-sm text-gray-600">
+          Example: NASA POWER <code class="block bg-gray-100 rounded p-2 my-2 text-xs overflow-x-auto">GET https://power.larc.nasa.gov/api/temporal/daily/point?parameters=PRECTOT,T2M,RH2M&start=20250101&end=20250131&lon=36.82&lat=-1.29&format=JSON</code>
+          Response → JSON with keys <code>PRECTOT</code> (rain mm), <code>T2M</code> (°C), <code>RH2M</code> (%).
+        </p>
+      </div>
+    </div>
+
+    <!-- Step 4 -->
+    <div class="flex items-start gap-4">
+      <span class="flex h-10 w-10 items-center justify-center rounded-full bg-sky-600 text-white font-semibold shrink-0">4</span>
+      <div>
+        <h3 class="font-semibold text-gray-800">Display &amp; act</h3>
+        <p class="text-sm text-gray-600">
+          • Plot daily rainfall bars → irrigation planner.<br>
+          • Compare soil‑moisture vs wilting threshold → drought alerts.<br>
+          • Sum solar radiation for GDD → growth stage predictor.
+        </p>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Call‑out -->
+  <div class="mt-6 border-l-4 border-sky-600 bg-sky-50 p-4 rounded-r-lg text-sm text-sky-800">
+    📌 <strong>Tip:</strong> Weather updates can be hourly—cache responses & only refresh when new timestamps appear to save API credits.
+  </div>
+
+</section>
 
 </main>
 
